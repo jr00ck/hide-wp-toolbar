@@ -16,7 +16,7 @@ jQuery(function($){
 
 		hide_wp_toolbar_hide(hide_toolbar);
 		
-		// fire ajax to update toolbar status, sending css class (why not send hide or show?)
+		// fire ajax to update toolbar status, sending css class
 		$.post(
 			HWPTB.ajaxurl,
 			{
