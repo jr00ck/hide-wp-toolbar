@@ -17,6 +17,9 @@ There are no options or configuration. Just install and activate the plugin. Whe
 
 I actually like the WordPress Toolbar. It's a convenient way to go back and forth from the admin area to the public website. However, when I'm doing design modifications for a theme, the Toolbar can be visually distracting. I wanted a quick way to hide the WordPress Toolbar when needed, but otherwise keep it around. I tried several plugins but they didn't work as I wanted or didn't even work at all in some cases. So I decided to build my own.
 
+= Contributions Welcome =
+This plugin is now on Github. [Submit a pull request](https://github.com/jr00ck/hide-wp-toolbar) if you'd like to contribute.
+
 == Installation ==
 
 1. Upload entire `hide-wp-toolbar` directory to the `/wp-content/plugins/` directory
