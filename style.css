@@ -1,0 +1,90 @@
+html.show-wp-toolbar.transition {
+	transition: margin-top 1s;
+	-webkit-transition: margin-top 1s;
+	-moz-transition: margin-top 1s;
+}
+
+html.hide-wp-toolbar {
+	margin-top: 0 !important;
+}
+
+html.hide-wp-toolbar.transition {
+	transition: margin-top 1s;
+	-webkit-transition: margin-top 1s;
+	-moz-transition: margin-top 1s;
+	transition-delay: 1s;
+	-webkit-transition-delay: 1s;
+	-moz-transition-delay: 1s;
+}
+
+#wp-admin-bar-hide {
+	cursor: pointer;
+}
+
+#wpadminbar.show-wp-toolbar.transition #wp-admin-bar-hide {
+	transition: margin-right 2.5s;
+	-webkit-transition: margin-right 2.5s;
+	-moz-transition: margin-right 2.5s;
+}
+
+#wpadminbar.hide-wp-toolbar #wp-admin-bar-hide {
+	margin-right: -38px;
+	background-color: #464646;
+}
+
+#wpadminbar.hide-wp-toolbar.transition #wp-admin-bar-hide {
+	transition: margin-right 2.5s;
+	-webkit-transition: margin-right 2.5s;
+	-moz-transition: margin-right 2.5s;
+}
+
+#wpadminbar.show-wp-toolbar {
+	left: 0;
+}
+
+#wpadminbar.show-wp-toolbar.transition {
+	transition: left 1s;
+	-webkit-transition: left 1s;
+	-moz-transition: left 1s;
+}
+
+#wpadminbar.hide-wp-toolbar {
+	left: -100%;
+}
+
+#wpadminbar.hide-wp-toolbar.transition {
+	transition: left 1s;
+	-webkit-transition: left 1s;
+	-moz-transition: left 1s;
+}
+
+#wpadminbar #wp-admin-bar-hide div div {
+	font-size: 10px;
+}
+
+#wpadminbar.show-wp-toolbar.transition #wp-admin-bar-hide div div {
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition-delay: 1s;
+	-webkit-transition-delay: 1s;
+	-moz-transition-delay: 1s;
+}
+
+#wpadminbar.hide-wp-toolbar #wp-admin-bar-hide div div {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+}
+
+#wpadminbar.hide-wp-toolbar.transition #wp-admin-bar-hide div div {
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition-delay: 1s;
+	-webkit-transition-delay: 1s;
+	-moz-transition-delay: 1s;
+}
