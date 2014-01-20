@@ -28,7 +28,6 @@ html.hide-wp-toolbar.transition {
 }
 
 #wpadminbar.hide-wp-toolbar #wp-admin-bar-hide {
-	margin-right: -38px;
 	background-color: #464646;
 }
 
@@ -50,6 +49,7 @@ html.hide-wp-toolbar.transition {
 
 #wpadminbar.hide-wp-toolbar {
 	left: -100%;
+	margin-left: 32px;
 }
 
 #wpadminbar.hide-wp-toolbar.transition {
