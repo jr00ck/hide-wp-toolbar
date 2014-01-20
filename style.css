@@ -49,7 +49,7 @@ html.hide-wp-toolbar.transition {
 
 #wpadminbar.hide-wp-toolbar {
 	left: -100%;
-	margin-left: 32px;
+	margin-left: 35px;
 }
 
 #wpadminbar.hide-wp-toolbar.transition {
@@ -58,11 +58,21 @@ html.hide-wp-toolbar.transition {
 	-moz-transition: left 1s;
 }
 
-#wpadminbar #wp-admin-bar-hide div div {
-	font-size: 10px;
+#wpadminbar #wp-admin-bar-hide div a {
+	padding: 0;
 }
 
-#wpadminbar.show-wp-toolbar.transition #wp-admin-bar-hide div div {
+#wpadminbar #wp-admin-bar-hide div a:before {
+	font-size: 15px;
+	font-family: "dashicons";
+	content: "\f340";
+}
+
+#wpadminbar #wp-admin-bar-hide div a:link {
+	color: #ccc;
+}
+
+#wpadminbar.show-wp-toolbar.transition #wp-admin-bar-hide div a {
 	transform: rotate(0deg);
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
@@ -74,13 +84,13 @@ html.hide-wp-toolbar.transition {
 	-moz-transition-delay: 1s;
 }
 
-#wpadminbar.hide-wp-toolbar #wp-admin-bar-hide div div {
+#wpadminbar.hide-wp-toolbar #wp-admin-bar-hide div a {
 	transform: rotate(180deg);
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 }
 
-#wpadminbar.hide-wp-toolbar.transition #wp-admin-bar-hide div div {
+#wpadminbar.hide-wp-toolbar.transition #wp-admin-bar-hide div a {
 	transition: all 1s;
 	-webkit-transition: all 1s;
 	-moz-transition: all 1s;

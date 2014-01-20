@@ -3,7 +3,7 @@
 Plugin Name: Hide WP Toolbar
 Plugin URI: http://blog.webguysaz.com/hide-wp-toolbar-wordpress-plugin/
 Description: The plugin adds a clickable button to the right side of the WordPress Toolbar that will show or hide the bar with nice transitions.
-Version: 2.1
+Version: 2.2
 Author: Web Guys
 Author URI: http://webguysaz.com
 Author Email: jeremy@webguysaz.com
@@ -22,9 +22,9 @@ function hide_wp_toolbar_add_button($toolbar){
 
 	// Properties for the button
     $args = array(
-            'id'    => 'hide',
-            'title' => '<div><<</div>',
-            'parent' => 'top-secondary'
+            'id'		=> 'hide',
+            'title'		=> '<a href="javascript://"></a>',
+            'parent'	=> 'top-secondary'
             );
  
     // Add button to admin bar
@@ -40,9 +40,8 @@ add_action( 'wp_enqueue_scripts', 'hide_wp_toolbar_add_stylesheet' );
 
 function hide_wp_toolbar_add_stylesheet() {
 	
-	// Register the style for plugin:
-	wp_register_style( 'hide-wp-toolbar-style', plugins_url( 'style.css', __FILE__ ) );
-	wp_enqueue_style( 'hide-wp-toolbar-style' );
+	// Register the style for plugin
+	wp_enqueue_style( 'hide-wp-toolbar-style', plugins_url( 'style.css', __FILE__ ), array('dashicons'), '2.2'  );
 }
 
 
