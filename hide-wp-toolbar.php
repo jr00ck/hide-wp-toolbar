@@ -115,6 +115,7 @@ final class HideWPToolbar {
 			if ( ! defined( 'HideWPToolbar_PLUGIN_DIR' ) )
 				define( 'HideWPToolbar_PLUGIN_DIR',  plugin_dir_path( __FILE__ ) );
 			require_once HideWPToolbar_PLUGIN_DIR . 'class-hidewptoolbar-session.php';
+			self::$instance = new HideWPToolbar();
 			self::$instance->session = new HideWPToolbar_Session(); 
 		}
 
