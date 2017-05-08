@@ -3,7 +3,7 @@
 Plugin Name: Hide WP Toolbar
 Plugin URI: http://blog.webguysaz.com/hide-wp-toolbar-wordpress-plugin/
 Description: The plugin adds a clickable button to the right side of the WordPress Toolbar that will show or hide the bar with nice transitions.
-Version: 2.3
+Version: 2.4
 Author: Web Guys
 Author URI: http://webguysaz.com
 Author Email: jeremy@webguysaz.com
@@ -42,7 +42,7 @@ add_action( 'wp_enqueue_scripts', 'hide_wp_toolbar_add_stylesheet' );
 function hide_wp_toolbar_add_stylesheet() {
 	
 	// Register the style for plugin
-	wp_enqueue_style( 'hide-wp-toolbar-style', plugins_url( 'style.css', __FILE__ ), array('dashicons'), '2.3'  );
+	wp_enqueue_style( 'hide-wp-toolbar-style', plugins_url( 'style.css', __FILE__ ), array('dashicons'), '2.4'  );
 }
 
 
@@ -80,20 +80,24 @@ function hide_wp_toolbar_add_script() {
 // set status
 function hide_wp_toolbar_set($toolbar_css_class){
 
+	// set toolbar status in transient 
 	$toolbar_status = 'shown';
+	$transient_name	= 'hide_wp_toolbar_status';
+	$transient_exp	= 60 * 60 * 24 * 7; // 7 days
 
 	if($toolbar_css_class == 'hide-wp-toolbar'){
 		$toolbar_status = 'hidden';
 	}
 
-	HWPTB()->session->set('hide_wp_toolbar_status', $toolbar_status);
+	set_transient( $transient_name, $toolbar_status, $transient_exp );
+
 }
 
 function hide_wp_toolbar_get(){
 
 	$toolbar_css_class = 'show-wp-toolbar';
 
-	$toolbar_status = HWPTB()->session->get('hide_wp_toolbar_status');
+	$toolbar_status = get_transient('hide_wp_toolbar_status');
 
 	if($toolbar_status == 'hidden'){
 		$toolbar_css_class = 'hide-wp-toolbar';
@@ -101,35 +105,6 @@ function hide_wp_toolbar_get(){
 
 	return $toolbar_css_class;
 }
-
-/*********************************************
-	Load Session Manager
-**********************************************/
-// TODO: CLEAN UP THIS CODE. SEE CODE AT BOTTOM COMMENT (http://wordpress.org/support/topic/on-busy-sites-the-plugin-becomes-very-inefficient)
-final class HideWPToolbar {
-
-	private static $instance;
-	public $session;
-
-	public static function instance() {
-		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof HideWPToolbar ) ) {
-			if ( ! defined( 'HideWPToolbar_PLUGIN_DIR' ) )
-				define( 'HideWPToolbar_PLUGIN_DIR',  plugin_dir_path( __FILE__ ) );
-			require_once HideWPToolbar_PLUGIN_DIR . 'class-hidewptoolbar-session.php';
-			self::$instance = new HideWPToolbar();
-			self::$instance->session = new HideWPToolbar_Session(); 
-		}
-
-		return self::$instance;
-	}
-}
-
-function HWPTB() {
-	return HideWPToolbar::instance();
-}
-
-// Get HWPTB Running
-HWPTB();
 
 
 /*********************************************

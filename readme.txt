@@ -4,8 +4,8 @@ Plugin URI: http://blog.webguysaz.com/hide-wp-toolbar-wordpress-plugin/
 Donate link: http://blog.webguysaz.com/donate/
 Tags: hide, toolbar, minimize, admin bar, toggle, adminbar
 Requires at least: 3.8
-Tested up to: 4.6
-Stable tag: 2.3
+Tested up to: 4.7.4
+Stable tag: 2.4
 
 Easily hide or show the front-end WordPress Admin Toolbar with a click of a button.
 
@@ -34,7 +34,7 @@ Nope. No settings page is created. Just activate and start using. No configurati
 
 = I don't see any of the nice transitions when the toolbar hides or shows. Why not? =
 
-You most likely have an outdated browser, like Internet Explorer 9 or below. This plugin uses nice CSS3 transitions that are supported in all modern browsers, like [Chrome](http://google.com/chrome), [Firefox](http://firefox.com), [Safari](http://apple.com/safari), [Internet Explorer 10+](http://windows.microsoft.com/en-us/internet-explorer/download-ie), and [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge).
+You most likely have a very outdated browser, like Internet Explorer 9 or below. This plugin uses nice CSS3 transitions that are supported in all modern browsers, like [Chrome](http://google.com/chrome), [Firefox](http://firefox.com), [Safari](http://apple.com/safari), and [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge).
 
 = Why don't you use jQuery UI for transitions instead? Then it would work on outdated browsers, right? =
 
@@ -46,6 +46,10 @@ I could. But it would be wrong.
 1. The WordPress Toolber hidden with only the hide/show button visible.
 
 == Changelog ==
+
+= 2.4 =
+* Removed dependency on WP Session Manager. Code included library was outdated and had a security issue. Now using WordPress transients to store state of the toolbar.
+* Tested with WordPress 4.7.4
 
 = 2.3 =
 * Internationalized plugin for proper text translation handling
