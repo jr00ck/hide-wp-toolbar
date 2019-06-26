@@ -4,7 +4,7 @@ Plugin URI: http://blog.webguysaz.com/hide-wp-toolbar-wordpress-plugin/
 Donate link: http://blog.webguysaz.com/donate/
 Tags: hide, toolbar, minimize, admin bar, toggle, adminbar
 Requires at least: 3.8
-Tested up to: 4.9
+Tested up to: 5.2.2
 Stable tag: 2.4.2
 
 Easily hide or show the front-end WordPress Admin Toolbar with a click of a button.
@@ -43,7 +43,7 @@ I could. But it would be wrong.
 == Screenshots ==
 
 1. The WordPress Toolbar shown with the hide/show button on the right.
-1. The WordPress Toolber hidden with only the hide/show button visible.
+1. The WordPress Toolbar hidden with only the hide/show button visible.
 
 == Changelog ==
 
