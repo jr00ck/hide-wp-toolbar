@@ -1,7 +1,7 @@
 === Hide WP Toolbar ===
 Contributors: jr00ck
-Plugin URI: http://blog.webguysaz.com/hide-wp-toolbar-wordpress-plugin/
-Donate link: http://blog.webguysaz.com/donate/
+Plugin URI: https://blog.webguysaz.com/hide-wp-toolbar-wordpress-plugin/
+Donate link: https://blog.webguysaz.com/donate/
 Tags: hide, toolbar, minimize, admin bar, toggle, adminbar
 Requires at least: 3.8
 Tested up to: 5.5
