@@ -47,6 +47,9 @@ I could. But it would be wrong.
 
 == Changelog ==
 
+= 2.5.3 =
+* Stopped loading CSS/JS for non-logged in users that don't have the toolbar (Github issue #6)
+
 = 2.4.2 =
 * Modernized and added better comments to javascript code
 
