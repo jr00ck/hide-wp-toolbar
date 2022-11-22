@@ -3,7 +3,7 @@
 Plugin Name: Hide WP Toolbar
 Plugin URI: http://blog.webguysaz.com/hide-wp-toolbar-wordpress-plugin/
 Description: The plugin adds a clickable button to the right side of the WordPress Toolbar that will show or hide the bar with nice transitions.
-Version: 2.5.4
+Version: 2.5.5
 Author: Web Guys
 Author URI: http://webguysaz.com
 Author Email: jeremy@webguysaz.com
@@ -53,7 +53,7 @@ function hide_wp_toolbar_add_stylesheet() {
 
 	if(!is_admin() && is_user_logged_in()){
 		// Register the style for plugin
-		wp_enqueue_style( 'hide-wp-toolbar-style', plugins_url( 'style.css', __FILE__ ), array('dashicons'), '2.5.4'  );
+		wp_enqueue_style( 'hide-wp-toolbar-style', plugins_url( 'style.css', __FILE__ ), array('dashicons'), '2.5.5'  );
 	}
 }
 
@@ -130,7 +130,9 @@ add_action( 'wp_ajax_HWPTB_state', 'HWPTB_ajax_submit' );
 
 function HWPTB_ajax_submit() {
 
-	if(!is_admin() && is_user_logged_in()){
+	if(is_user_logged_in()){
+		header( "Content-Type: application/json" );
+
 		$nonce = $_POST['ajax_nonce'];
 
 		// check to see if the submitted nonce matches with the generated nonce we created earlier
@@ -138,22 +140,18 @@ function HWPTB_ajax_submit() {
 			die ( __('Invalid nonce value!', 'hide-wp-toolbar') );
 		}
 
-		// ignore the request if the current user isn't logged in
-		if ( is_user_logged_in() ) {
+		// get the submitted parameters
+		$toolbar_class = $_POST['toolbar_class'];
 
-			// get the submitted parameters
-			$toolbar_class = $_POST['toolbar_class'];
+		hide_wp_toolbar_set($toolbar_class);
 
-			hide_wp_toolbar_set($toolbar_class);
+		// generate the response (WITH NEW NONCE VALUE?)
+		// $response = json_encode( array( 'toolbar_class' => $toolbar_class ) );
 
-			// generate the response (WITH NEW NONCE VALUE?)
-			// $response = json_encode( array( 'toolbar_class' => $toolbar_class ) );
+		// response output
+		// header( "Content-Type: application/json" );
+		// echo $response;
 
-			// response output
-			// header( "Content-Type: application/json" );
-			// echo $response;
-
-		}
 		// IMPORTANT: don't forget to "exit"
 		exit;
 	}
