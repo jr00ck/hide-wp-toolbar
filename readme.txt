@@ -4,8 +4,8 @@ Plugin URI: https://blog.webguysaz.com/hide-wp-toolbar-wordpress-plugin/
 Donate link: https://blog.webguysaz.com/donate/
 Tags: hide, toolbar, minimize, admin bar, toggle, adminbar
 Requires at least: 3.8
-Tested up to: 6.1
-Stable tag: 2.5.4
+Tested up to: 6.1.1
+Stable tag: 2.5.5
 
 Easily hide or show the front-end WordPress Admin Toolbar with a click of a button.
 
@@ -13,7 +13,7 @@ Easily hide or show the front-end WordPress Admin Toolbar with a click of a butt
 
 Easily hide or show the front-end WordPress Admin Toolbar with a click of a button. The plugin adds a special button to the right side of the WordPress Admin Toolbar that only displays when you are outside the admin area of WordPress on the front-end. Clicking it will make the admin bar slide off the page to the top left corner, leaving only the hide/show button visible. Clicking the button again will restore the Toolbar to its original position. The shown/hidden position is remembered between page visits so that it can be kept hidden away until you are ready to bring it back.
 
-There are no options or configuration. Just install and activate the plugin. When you exit the admin area, you will see the button to the far right of the Toolbar. Modern browsers (not IE9 or below) will use a nice transition to show and hide the Toolbar.
+There are no options or configuration. Just install and activate the plugin. When you exit the admin area, you will see the button to the far right of the Toolbar.
 
 I actually like the WordPress Toolbar. It's a convenient way to go back and forth from the admin area to the public website. However, when I'm doing design modifications for a theme, the Toolbar can be visually distracting. I wanted a quick way to hide the WordPress Toolbar when needed, but otherwise keep it around. I tried several plugins but they didn't work as I wanted or didn't even work at all in some cases. So I decided to build my own.
 
@@ -32,13 +32,9 @@ This plugin is on Github. [Submit a pull request](https://github.com/jr00ck/hide
 
 Nope. No settings page is created. Just activate and start using. No configuration required.
 
-= I don't see any of the nice transitions when the toolbar hides or shows. Why not? =
+= Why does the toolbar flash briefly between page loads when in a hidden state? =
 
-You most likely have a very outdated browser, like Internet Explorer 9 or below. This plugin uses nice CSS3 transitions that are supported in all modern browsers, like [Chrome](http://google.com/chrome), [Firefox](http://firefox.com), [Safari](http://apple.com/safari), and [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge).
-
-= Why don't you use jQuery UI for transitions instead? Then it would work on outdated browsers, right? =
-
-I could. But it would be wrong.
+The toolbar uses CSS to hide and since the toolbar always shows by default, there may be a brief moment where it appears before the CSS is fully loaded to hide it. This is standard behavior for CSS and applies to everything on the page.
 
 == Screenshots ==
 
@@ -46,6 +42,9 @@ I could. But it would be wrong.
 1. The WordPress Toolbar hidden with only the hide/show button visible.
 
 == Changelog ==
+
+= 2.5.5 =
+* Fixed toolbar state not saving between page loads (Github issue #7)
 
 = 2.5.4 =
 * Stopped loading CSS/JS for non-logged in users that don't have the toolbar (Github issue #6)
