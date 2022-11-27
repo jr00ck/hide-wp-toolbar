@@ -1,7 +1,5 @@
 html.show-wp-toolbar.transition {
 	transition: margin-top 1s;
-	-webkit-transition: margin-top 1s;
-	-moz-transition: margin-top 1s;
 }
 
 html.hide-wp-toolbar {
@@ -10,11 +8,7 @@ html.hide-wp-toolbar {
 
 html.hide-wp-toolbar.transition {
 	transition: margin-top 1s;
-	-webkit-transition: margin-top 1s;
-	-moz-transition: margin-top 1s;
 	transition-delay: 1s;
-	-webkit-transition-delay: 1s;
-	-moz-transition-delay: 1s;
 }
 
 #wp-admin-bar-hide {
@@ -23,8 +17,6 @@ html.hide-wp-toolbar.transition {
 
 #wpadminbar.show-wp-toolbar.transition #wp-admin-bar-hide {
 	transition: margin-right 2.5s;
-	-webkit-transition: margin-right 2.5s;
-	-moz-transition: margin-right 2.5s;
 }
 
 #wpadminbar.hide-wp-toolbar #wp-admin-bar-hide {
@@ -33,8 +25,6 @@ html.hide-wp-toolbar.transition {
 
 #wpadminbar.hide-wp-toolbar.transition #wp-admin-bar-hide {
 	transition: margin-right 2.5s;
-	-webkit-transition: margin-right 2.5s;
-	-moz-transition: margin-right 2.5s;
 }
 
 #wpadminbar.show-wp-toolbar {
@@ -43,8 +33,6 @@ html.hide-wp-toolbar.transition {
 
 #wpadminbar.show-wp-toolbar.transition {
 	transition: left 1s;
-	-webkit-transition: left 1s;
-	-moz-transition: left 1s;
 }
 
 #wpadminbar.hide-wp-toolbar {
@@ -54,8 +42,6 @@ html.hide-wp-toolbar.transition {
 
 #wpadminbar.hide-wp-toolbar.transition {
 	transition: left 1s;
-	-webkit-transition: left 1s;
-	-moz-transition: left 1s;
 }
 
 #wpadminbar #wp-admin-bar-hide div a {
@@ -74,27 +60,15 @@ html.hide-wp-toolbar.transition {
 
 #wpadminbar.show-wp-toolbar.transition #wp-admin-bar-hide div a {
 	transform: rotate(0deg);
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
 	transition: all 1s;
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
 	transition-delay: 1s;
-	-webkit-transition-delay: 1s;
-	-moz-transition-delay: 1s;
 }
 
 #wpadminbar.hide-wp-toolbar #wp-admin-bar-hide div a {
 	transform: rotate(180deg);
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
 }
 
 #wpadminbar.hide-wp-toolbar.transition #wp-admin-bar-hide div a {
 	transition: all 1s;
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
 	transition-delay: 1s;
-	-webkit-transition-delay: 1s;
-	-moz-transition-delay: 1s;
 }
