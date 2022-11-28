@@ -49,7 +49,6 @@ html.hide-wp-toolbar.transition {
 }
 
 #wpadminbar #wp-admin-bar-hide div a:before {
-	font-size: 15px;
 	font-family: "dashicons";
 	content: "\f340";
 }
