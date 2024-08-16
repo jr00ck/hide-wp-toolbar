@@ -4,7 +4,7 @@ Plugin URI: https://github.com/jr00ck/hide-wp-toolbar/
 Tags: hide, toolbar, minimize, toggle, adminbar
 License: GPLv3
 Requires at least: 3.8
-Tested up to: 6.5
+Tested up to: 6.5.5
 Stable tag: 2.6.1
 
 Easily hide or show the front-end WordPress Admin Toolbar with a click of a button.
