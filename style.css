@@ -13,6 +13,7 @@ html.hide-wp-toolbar.transition {
 
 #wp-admin-bar-hide {
 	cursor: pointer;
+	float: right !important; /* needed since WP6.6+ */
 }
 
 #wpadminbar.show-wp-toolbar.transition #wp-admin-bar-hide {
